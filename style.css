@@ -58,6 +58,7 @@ main{
   float: right;
   padding: 10px;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .sidebar{
@@ -117,5 +118,56 @@ main nav ol li{
 
 
 /* MAIN - CONTENUTO TRACCE */
+
+.card{
+  padding: 20px 0px;
+  flex-direction: row;
+}
+
+.item{
+  text-align: center;
+  width: calc(100% / 6);
+  justify-content: space-between;
+}
+
+.card img{
+  width: 80%;
+}
+
+.titolo h3, 
+.item h4{
+  color: white;
+}
+
+.item p, .titolo p{
+  color: #7B7D82;
+}
+
+.titolo p{
+  padding: 5px 0px;
+}
+
+.titolo h3{
+  padding-top: 30px;
+  font size: 22px;
+  font-weight: 700;
+}
+
+.item h4{
+  font size: 18px;
+  font-weight: 600;
+  padding: 5px 0px;
+}
+
+
+.titolo h3{
+  font-size: 30px;
+}
+
+.cerchio img{
+  border-radius: 100px;
+}
+
+
 
 /* FOOTER */
