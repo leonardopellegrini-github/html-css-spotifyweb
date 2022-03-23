@@ -18,6 +18,7 @@
 
 li{
   list-style: none;
+  font-size: 14px
 }
 
 body{
@@ -88,11 +89,7 @@ header a{
 /* SIDEBAR */
 
 .logo, .due, .tre{
-  padding: 20px 10px;
-}
-
-.tre li{
-  padding: 5px 0px;
+  padding: 20px 20px;
 }
 
 .sidebar img{
@@ -101,7 +98,7 @@ header a{
 }
 
 .sidebar ol img{
-  width: 12%;
+  width: 11%;
   margin-right: 10px;
 }
 
@@ -130,6 +127,14 @@ header a{
   color: white;
 }
 
+.due{
+  padding-bottom: 100px;
+}
+
+.tre li{
+  padding: 5px 0px;
+}
+
 .tre img{
   width: 10%;
   background-color: #7B7D82;
@@ -145,6 +150,10 @@ header a{
   border-bottom: 1px solid #5F5F5F;
   width: 80%;
   margin: 10px 0;
+}
+
+.sidebar li:hover, .sidebar .tre p:hover{
+  color: white;
 }
 
 /* MAIN - NAV */
@@ -245,8 +254,14 @@ footer .left{
   color: #5F5F5F;
 }
 
-.fa-circle-play:before, .fa-play-circle:before {
+#play {
   font-size: 30px;
+  padding: 10px;
+}
+
+#play:hover {
+  font-size: 40px;
+  padding: 5px;
 }
 
 footer .center{
@@ -260,9 +275,18 @@ footer .center{
 footer .center #durata{
   width: 700px;
   height: 5px;
-  background-color: grey;
+  background-color: rgb(61, 61, 61);
   border-radius: 25px;
   margin: 0 10px;
+}
+
+#tempo, #ambiente{
+  justify-content: flex-start;
+  width: 50%;
+  height: 100%;
+  margin-left: 0;
+  border-radius: 25px;
+  background-color: #C1C1C1;
 }
 
 #players{
@@ -295,8 +319,24 @@ footer .right i{
 
 footer .right #volume{
   width: 100%;
-  height: 10px;
-  background-color: grey;
+  height: 5px;
+  background-color: rgb(61, 61, 61);
   border-radius: 25px;
 }
 
+footer .left i{
+  color: #737373;
+}
+
+footer .left i:hover{
+  color: white;
+}
+
+.pulsante{
+  height: 15px;
+  width: 5px;
+  background-color: green;
+  border-radius: 50px;
+  border: 2px solid white;
+  margin-left: 100%;
+}
