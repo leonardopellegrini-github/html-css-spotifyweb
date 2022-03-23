@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.css' integrity='sha512-M9yHeAbo9J8KSZVvOi5PEo4WrL6LWxbS+cvh6faIEPPqHQXhxilgCSJ/L2tTqRf73GmI4+tNy8OWSsQuwXc4fw==' crossorigin='anonymous'/>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,20 +28,16 @@
 
       <div class="uno">
         <ol>
-          <li><img src="img/home.svg" alt="Home"> <span>Home</span></li>
-          <li><img src="img/search.svg" alt="Search"> <span>Search</span></li>
-          <li><img src="img/libreria.svg" alt="Libreria"> <span>Library</span></li>
+          <li id="active"><img src="img/home.svg" alt="Home">  <span>Home</span></li>
+          <li><img src="img/search.svg" alt="Search">  <span>Search</span></li>
+          <li><img src="img/libreria.svg" alt="Libreria">  <span>Library</span></li>
         </ol>
       </div>
 
       <div class="due">
         <h3>PLAYLIST</h3>
-
-      </div>
-
-      <div class="tre">
         <ol>
-          <li>Nuova Playlist</li>
+          <li> <img src="img/radar.jpeg" alt=""> Nuova Playlist</li>
           <li>Nuova Playlist</li>
           <li>Nuova Playlist</li>
           <li>Nuova Playlist</li>
@@ -49,10 +45,10 @@
         </ol>
       </div>
 
-      <div class="quattro">
-        <p>Installa app</p>
+      <div class="tre">
+        <p><i class="fas fa-download"></i> Installa app</p>
         <hr>
-        <h4>Utente</h4>
+        <h4><img src="img/profile.svg" alt=""> Utente</h4>
       </div>
 
     </div>
@@ -64,7 +60,7 @@
     <!--NAV-->
     <nav class="flex">
       <ol>
-        <li>In evidenza</li>
+        <li id="attivonav">In evidenza</li>
         <li>Nuove uscite</li>
         <li>Podcast</li>
         <li>Release Friday</li>
@@ -163,19 +159,35 @@
   <footer class="flex">
 
     <div class="left flex">
-      <ol>
-        <li><img src="img/sinister.jpeg" alt="Sinister"></li>
-        <li><h3>Titolo</h3><p>Artista</p></li>
-        <li></li>
-      </ol>
+      
+     <img id="copertina" src="img/sinister.jpeg" alt="Sinister">
+     <div><span><h3>Titolo</h3><p>Artista</p></span></div>
+     <i class="fa-regular fa-heart"></i>
+     <i class="fa-regular fa-folder"></i>
+  
     </div>
 
     <div class="center flex">
 
+      <div id="players" class="flex"> 
+        <i class="fa-solid fa-shuffle"></i>
+        <i class="fa-solid fa-backward-fast"></i>
+        <i class="fa-regular fa-circle-play"></i>
+        <i class="fa-solid fa-forward-fast"></i>
+        <i class="fa-solid fa-rotate-right"></i>
+      </div>
+
+      <div id="pulsanti" class="flex">
+      <span>4:00</span> <div id="durata"></div> <span>6:00</span>
+      </div>
+
     </div>
     
     <div class="right flex">
-
+        <i class="fa-solid fa-list"></i>
+        <i class="fa-solid fa-desktop"></i>
+        <i class="fa-solid fa-volume-high"></i>
+      <div id="volume"></div>
     </div>
   </footer>
 
