@@ -98,14 +98,15 @@ header a:hover{
   padding: 20px 20px;
 }
 
-.up{
-  height: 300px;
+#up{
+  height: 550px;
 }
 
-.down{
-  height: calc(100% - 300px);
-  position:relative;
-  bottom:0;
+#down{
+  height: calc(100% - 500px);
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .playlisttitle{
@@ -120,6 +121,14 @@ header a:hover{
   font-size: 20px;
   text-align: center;
   line-height: 1.4;
+}
+
+#plus:hover {
+  background-color: white;
+}
+
+.playlisttitle:hover{
+  color: white;
 }
 
 .sidebar img{
@@ -235,14 +244,29 @@ main nav ol li{
   text-align: center;
   width: calc(100% / 6);
   justify-content: space-between;
+  flex-wrap: calc(6);
 }
 
 .card img{
   width: 80%;
 }
 
-.effect{
-  background-color: #141922;
+.item .img{
+  position: relative;
+}
+
+.item .img:hover{
+  filter: brightness(-200%);
+}
+
+.item i{
+  display: none;
+  color: white;
+  position: absolute;
+  bottom:0; 
+  left:0; 
+  transform: translate(-254%, 140%);
+  font-size: 40px;
 }
 
 .titolo h3, 
@@ -364,13 +388,6 @@ footer .right i{
   margin: 3px 10px;
 }
 
-footer .right #volume{
-  width: 100%;
-  height: 5px;
-  background-color: rgb(61, 61, 61);
-  border-radius: 25px;
-}
-
 footer .left i{
   color: #737373;
 }
@@ -379,16 +396,47 @@ footer .left i:hover{
   color: white;
 }
 
+footer .right #volume{
+  width: 100%;
+  height: 5px;
+  background-color: rgb(61, 61, 61);
+  border-radius: 25px;
+}
+
+
+.right .pulsante{
+  
+  display: none;
+}
+
 .pulsante{
   display: none;
-  height: 25px;
-  width: 25px;
+}
+
+.right .pulsante:hover{
+  display: block;
+  height: 15px;
+  width: 15px;
   background-color: green;
   border-radius: 50px;
   border: 2px solid white;
-  margin-left: 100%;
+  position: absolute;
 }
 
+.pulsante:hover{
+  margin-left: 7%;
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-color: green;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+}
+
+#tempo:hover, #ambiente:hover{
+  background-color: green;
+}
 
 /*RESPONSIVE*/
 
@@ -414,6 +462,9 @@ footer .left i:hover{
 
 @media only screen and (max-width: 560px) {
 
+  .sidebar{
+    width: 15%;
+  }
   .card{
     flex-wrap: wrap;
   }
@@ -427,7 +478,6 @@ footer .left i:hover{
 
   .logo, .lista, .utente{
     padding: 10px 5px;
-    
   }
 
   .sidebar{
