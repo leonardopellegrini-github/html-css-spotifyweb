@@ -86,10 +86,26 @@ header a{
   color: white;
 }
 
+header a:hover{
+  padding: 10px 35px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
 /* SIDEBAR */
 
 .logo, .lista, .utente, .sidebar h3{
   padding: 20px 20px;
+}
+
+.up{
+  height: 300px;
+}
+
+.down{
+  height: calc(100% - 300px);
+  position:relative;
+  bottom:0;
 }
 
 .playlisttitle{
@@ -102,17 +118,25 @@ header a{
   background-color: #5F5F5F;
   color: #141922;
   font-size: 20px;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .sidebar img{
-  width: 50%;
+  width: 50px;
   vertical-align: middle;
 }
 
+.sidebar .logo img{
+  width: 120px;
+}
+
+.sidebar #logomobile{
+  display: none;
+}
+
 .sidebar ol img{
-  width: 11%;
+  width: 40px;
   margin-right: 10px;
 }
 
@@ -144,6 +168,7 @@ header a{
 .lista{
   overflow-y: scroll;
   padding-bottom: 0px;
+  height: 100px;
 }
 
 .utente li{
@@ -216,6 +241,10 @@ main nav ol li{
   width: 80%;
 }
 
+.effect{
+  background-color: #141922;
+}
+
 .titolo h3, 
 .item h4{
   color: white;
@@ -273,7 +302,7 @@ footer .left{
 
 #play {
   font-size: 30px;
-  padding: 10px;
+  padding: 5px;
 }
 
 #play:hover {
@@ -383,7 +412,7 @@ footer .left i:hover{
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 560px) {
 
   .card{
     flex-wrap: wrap;
@@ -401,23 +430,52 @@ footer .left i:hover{
     
   }
 
+  .sidebar{
+    text-align: center;
+  }
   .sidebar img{
     width: 100%;
   }
 
   .sidebar .sottologo img{
     width: 60%;
+    margin-right: 0px;
+  }
+
+  .sottologo li {
+    padding-left: 0px;
+    line-height: 2.5;
   }
 
   .sidebar .text, h3, .playlisttitle{
     display: none;
   }
 
-  .logo{
-    width: 100%;
+  .sidebar #logodesk{
+    display: none;
+  }
+
+  .sidebar #logomobile{
+    display: block;
+    width: 50px;
+    margin: auto;
+    filter: invert(100%);
   }
 
   .utente{
     align-content: flex-end;
   }
+
+  .utente img{
+    width: 30%;
+  }
+
+  .sottologo #active {
+    border-left: none;
+  }
+
+  .sottologo li{
+    padding: 0 auto;
+  }
+
 }
