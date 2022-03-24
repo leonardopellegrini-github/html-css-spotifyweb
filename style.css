@@ -88,8 +88,22 @@ header a{
 
 /* SIDEBAR */
 
-.logo, .due, .tre{
+.logo, .lista, .utente, .sidebar h3{
   padding: 20px 20px;
+}
+
+.playlisttitle{
+  padding: 10px 20px;
+}
+
+#plus{
+  width: 30px;
+  height: 30px;
+  background-color: #5F5F5F;
+  color: #141922;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar img{
@@ -106,53 +120,54 @@ header a{
   flex-direction: column;
 }
 
-.uno{
+.sottologo{
   justify-content: center;
 }
 
-.uno #active {
+.sottologo #active {
   border-left: 3px solid #9DE82E;
 }
 
-.uno li{
+.sottologo li{
   padding-left: 20px;
   line-height: 2.5;
 }
 
-.due li{
+.lista li{
   line-height: 3;
 }
 
-.due h3{
+.lista h3{
   color: white;
 }
 
-.due{
-  padding-bottom: 100px;
+.lista{
+  overflow-y: scroll;
+  padding-bottom: 0px;
 }
 
-.tre li{
+.utente li{
   padding: 5px 0px;
 }
 
-.tre img{
+.utente img{
   width: 10%;
   background-color: #7B7D82;
   border-radius: 25px;
 }
 
-.tre h4{
+.utente h4{
   font-size: 18px;
   color: white;
 }
 
-.tre hr{
+.utente hr{
   border-bottom: 1px solid #5F5F5F;
   width: 80%;
   margin: 10px 0;
 }
 
-.sidebar li:hover, .sidebar .tre p:hover{
+.sidebar li:hover, .sidebar .utente p:hover{
   color: white;
 }
 
@@ -167,6 +182,7 @@ main nav{
 main nav ol{
   color: #7B7D82;
   text-transform: uppercase;
+  text-align: center;
 }
 
 main nav li:hover{
@@ -238,15 +254,16 @@ main nav ol li{
 /* FOOTER */
 
 footer img{
-  width: 30%;
+  max-width: 30%;
   vertical-align: middle;
+  margin-right: 8px;
 }
 
 footer .left{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
+  width: 15%;
 }
 
 .left p{
@@ -266,14 +283,14 @@ footer .left{
 
 footer .center{
   text-align: center;
-  width: 700px;
+  width: 60%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 footer .center #durata{
-  width: 700px;
+  width: 100%;
   height: 5px;
   background-color: rgb(61, 61, 61);
   border-radius: 25px;
@@ -301,12 +318,13 @@ footer .center #durata{
 #pulsanti{
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 footer .right{
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 15%;
 }
 
 footer .right ol li{
@@ -333,10 +351,73 @@ footer .left i:hover{
 }
 
 .pulsante{
-  height: 15px;
-  width: 5px;
+  display: none;
+  height: 25px;
+  width: 25px;
   background-color: green;
   border-radius: 50px;
   border: 2px solid white;
   margin-left: 100%;
+}
+
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 750px) {
+
+  .card{
+    flex-wrap: wrap;
+  }
+
+  .item {
+    text-align: center;
+    width: calc(100% / 4);
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .logo{
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
+  .card{
+    flex-wrap: wrap;
+  }
+
+  .item {
+    text-align: center;
+    width: calc(100% / 2);
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .logo, .lista, .utente{
+    padding: 10px 5px;
+    
+  }
+
+  .sidebar img{
+    width: 100%;
+  }
+
+  .sidebar .sottologo img{
+    width: 60%;
+  }
+
+  .sidebar .text, h3, .playlisttitle{
+    display: none;
+  }
+
+  .logo{
+    width: 100%;
+  }
+
+  .utente{
+    align-content: flex-end;
+  }
 }
